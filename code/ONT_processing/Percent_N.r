@@ -1,16 +1,26 @@
-barcode18 <- barcode18_FR_cp.fasta.txt
-View(barcode18)
+# What is this code for?
 
-# Collapse into a single string
-barcode18 <- paste(barcode18, collapse = "")
+# CLear workspace
+rm(list = ls())
 
-# Total number of characters
-total_chars <- nchar(barcode18)
 
-# Count number of "N" (case-sensitive)
-num_n <- sum(strsplit(barcode18, "")[[1]] == "N")
+# Script parameters
+filename <- "barcode18_FR_cp.fasta.txt"
+filepath <- "data/processed/Demultiplexed_data_readable"
 
-# Percentage
-percent_n <- (num_N / total_chars) * 100
 
-percent_n
+# Load data
+filename <- file.path(filepath, filename)
+df <- read.table(filename, quote = "\"", comment.char = "")
+
+
+# Convert to a string
+seq_vec <- df[[1]]
+seq_vec <- seq_vec[!grepl("^>", seq_vec)]  # remove headers
+sequence <- paste(seq_vec, collapse = "")
+
+
+# Calculate percent N
+total_chars <- nchar(sequence)
+num_N <- sum(strsplit(sequence, "")[[1]] == "N")
+percent_N <- (num_N / total_chars) * 100
