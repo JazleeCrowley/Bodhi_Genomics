@@ -1,6 +1,6 @@
-#Bodhi_Genomics
+# Bodhi Genomics
 
-#Barcode Analysis
+## Barcode Analysis
 My first study is a genetic, barcode analysis of Ficus religiosa spread across the globe. This was done primarily through Sanger sequencing.
 
 After sequencing the DNA I inspected the sequences and ran quality control in MEGA. After analyzing 137 sequences of 273 basepairs in length in DNAsp, I generated [this](./figures/HaplotypeDiversity.png) table that reports the genetic diversity statistics.
