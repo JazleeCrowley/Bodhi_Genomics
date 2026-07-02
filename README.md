@@ -1,4 +1,4 @@
-# Bodhi_Genomics
+#Bodhi_Genomics
 
 #Barcode Analysis
 My first study is a genetic, barcode analysis of Ficus religiosa spread across the globe. This was done primarily through Sanger sequencing.
