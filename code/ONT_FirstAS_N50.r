@@ -10,9 +10,10 @@ library(gt)
 
 # 1. Import CSV
 qc_data <- read.csv(
-  "/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_FirstAS_N50.csv",
+  "/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_First&Second_N50.csv",
   check.names = FALSE
 )
+
 
 # 2. Remove empty columns
 qc_data <- qc_data[, names(qc_data) != "", drop = FALSE]
@@ -45,8 +46,6 @@ n50_table <- qc_data %>%
     N50_Num = "N50 reads",
     Q20_Percent = "Q20 (%)",
     Q30_Percent = "Q30 (%)",
-    Avg_Quality = "Mean quality",
-    GC_Percent = "GC (%)",
     Q1 = "Q1 (bp)",
     Q3 = "Q3 (bp)"
   ) %>%
@@ -93,8 +92,8 @@ n50_table <- qc_data %>%
   opt_row_striping()
 
 # 5. Display table
-n50_table
+n50_table_First&Second
 
 # 6. Export files
-gtsave(n50_table, "ONT_N50_QC.html")
-gtsave(n50_table, "ONT_N50_QC.png")
+gtsave(n50_table_First&Second, "ONT_N50_QC.html")
+gtsave(n50_table_First&Second, "ONT_N50_QC.png")
