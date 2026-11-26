@@ -8,6 +8,7 @@ r
 library(tidyverse)
 library(gt)
 
+
 # 1. Import CSV
 qc_data <- read.csv(
   "/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_First&Second_N50.csv",
@@ -28,7 +29,7 @@ qc_data <- qc_data %>%
   arrange(as.numeric(Barcode))
 
 # 4. Create table
-n50_table <- qc_data %>%
+n50_First_Second_table <- qc_data %>%
   gt() %>%
 
   tab_header(
@@ -92,8 +93,8 @@ n50_table <- qc_data %>%
   opt_row_striping()
 
 # 5. Display table
-n50_table_First&Second
+n50_First_Second_table
 
 # 6. Export files
-gtsave(n50_table_First&Second, "ONT_N50_QC.html")
-gtsave(n50_table_First&Second, "ONT_N50_QC.png")
+gtsave(n50_First_Second_table, "ONT_N50_QC.html")
+gtsave(n50_First_Second_table, "ONT_N50_QC.png")
