@@ -11,7 +11,7 @@ library(gt)
 
 # 1. Import CSV
 qc_data <- read.csv(
-  "/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_First&Second_N50.csv",
+  "/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_First_Second_N50.csv",
   check.names = FALSE
 )
 

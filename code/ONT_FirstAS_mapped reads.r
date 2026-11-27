@@ -1,5 +1,5 @@
 #make mapped table for first AS ONT run
-read.csv("/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_FirstAS_mappedreads.csv", nrows = 3)
+read.csv("/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_First_Second_mappedreads.csv", nrows = 3)
 
 # ==========================================
 # ONT Adaptive Sampling - Mapping QC
@@ -11,7 +11,7 @@ library(gt)
 
 # 1. Import CSV
 mapping_data <- read.csv(
-  "/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_FirstAS_mappedreads.csv",
+  "/Users/jazleecrowley/Git/Bodhi_Genomics/code/ONT_First_Second_mappedreads.csv",
   check.names = TRUE
 )
 
@@ -89,5 +89,5 @@ mapping_table <- mapping_data %>%
 mapping_table
 
 # 6. Export files
-gtsave(mapping_table, "ONT_Mapping_QC.html")
-gtsave(mapping_table, "ONT_Mapping_QC.png")
+gtsave(mapping_table, "ONT_Mapping_QC_First_Second.html")
+gtsave(mapping_table, "ONT_Mapping_QC_First_Second.png")
